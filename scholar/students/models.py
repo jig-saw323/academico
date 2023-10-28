@@ -7,3 +7,4 @@ class User(models.Model):
     password=models.CharField(max_length=500)
 
     dni=models.CharField(max_length=10, default='')
+    age=models.IntegerField(default=0)
