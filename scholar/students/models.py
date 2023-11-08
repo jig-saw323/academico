@@ -1,4 +1,5 @@
 
+from tkinter import CASCADE
 from django.db import models
 from  django.utils import timezone
 import datetime
@@ -62,7 +63,7 @@ class Persons(models.Model):
     
     mobile=models.CharField(max_length=50, null=False)
 
-    id_user =models.IntegerField( null= False)
+    id_user =models.ForeignKey( User,on_delete= CASCADE)
 
     created_at=models.DateTimeField(default= datetime.datetime.now, null=False)
 
