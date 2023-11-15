@@ -63,7 +63,7 @@ class Persons(models.Model):
     
     mobile=models.CharField(max_length=50, null=False)
 
-    id_user =models.ForeignKey( User,on_delete= CASCADE)
+    id_user =models.ForeignKey( User, on_delete= models.CASCADE)
 
     created_at=models.DateTimeField(default= datetime.datetime.now, null=False)
 
